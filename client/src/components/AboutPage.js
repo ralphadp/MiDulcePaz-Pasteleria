@@ -29,9 +29,9 @@ export function AboutPage() {
             <p>{API_BASE_URL}</p>
             <p>{process.env.REACT_APP_API_SERVER_PORT}</p>
             <p>{APP_BASE_URLPORT}</p>
-            <p>information.empresa</p>
-            <p>information.direccion</p>
-            <p>information.telefono</p>
+            <p>{information.empresa}</p>
+            <p>{information.direccion}</p>
+            <p>{information.telefono}</p>
           </div>
         </div>
       </div>
