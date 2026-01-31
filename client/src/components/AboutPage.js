@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { API_INFO, API_BASE_URL, APP_BASE_URLPORT} from '../constants';
+import { API_INFO } from '../constants';
 
 
 import './App.css';
@@ -26,9 +26,7 @@ export function AboutPage() {
           <div className="col-12">
             <p>Acerca de ...</p>
             <input type="hidden" value="{process.env.REACT_APP_API_SERVER_HOST}"/>
-            <input type="hidden" value="{API_BASE_URL}"/>
             <input type="hidden" value="{process.env.REACT_APP_API_SERVER_PORT}"/>
-            <input type="hidden" value="{APP_BASE_URLPORT}"/>
             <p><div class="text-primary">Nosotros somos: </div>{information.empresa}</p>
             <p><div class="text-primary">Direccion: </div>{information.direccion}</p>
             <p><div class="text-primary">Telefono: </div>{information.telefono}</p>
