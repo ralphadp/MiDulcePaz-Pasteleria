@@ -4,11 +4,14 @@ import { API_PRODUCTS} from '../constants';
 
 export function ProductDashboard() {
   const [products, setProducts] = useState([]);
-
+  console.log("Getting products");
    useEffect(() => {
       fetch(API_PRODUCTS)
         .then(response => response.text())
-        .then(data => setProducts(JSON.parse(data)))
+        .then(data => {
+          setProducts(JSON.parse(data));
+          console.log("Products", data);
+        })
         .catch(error => console.error('Error fetching products:', error));
     }, []);
 

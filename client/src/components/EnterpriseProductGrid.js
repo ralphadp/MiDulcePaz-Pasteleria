@@ -11,9 +11,13 @@ export function EnterpriseProductGrid() {
   const [products, setProducts] = useState([]);
   
   useEffect(() => {
+    console.log("Getting available products");
     fetch(API_AVAILABLE_PRODUCTS)
       .then(response => response.text())
-      .then(data => setProducts(JSON.parse(data)))
+      .then(data => {
+          setProducts(JSON.parse(data));
+          console.log("Available products", data);
+        })
       .catch(error => console.error('Error fetching products:', error));
   }, []);
 
