@@ -75,3 +75,24 @@ app.get('/products', (req, res) => {
             console.log("ERROR: ", error);
       });
 })
+
+app.get('/available_products', (req, res) => {
+      console.log("/available products called");
+
+      let DB = req.app.settings.DB;
+      let cakesCollection = DB.collection("cakes");
+      cakesCollection.find().toArray().then((data) => {
+            data.forEach((cake, index, array) => {
+                  if (array[index].inStock > 0) {
+                        array[index].inStock = "disponible";
+                  } else {
+                        array[index].inStock = "agotado";
+                  }
+            });
+            res.send(JSON.stringify(data));
+      })
+      .catch(error => {
+            console.log("ERROR: ", error);
+      });
+})
+
