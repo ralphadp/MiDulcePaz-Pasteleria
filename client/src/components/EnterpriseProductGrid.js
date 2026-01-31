@@ -1,4 +1,4 @@
-import { API_PRODUCTS} from '../constants';
+import { API_AVAILABLE_PRODUCTS} from '../constants';
 
 import '@progress/kendo-theme-bootstrap/dist/all.css';
 
@@ -11,7 +11,7 @@ export function EnterpriseProductGrid() {
   const [products, setProducts] = useState([]);
   
   useEffect(() => {
-    fetch(API_PRODUCTS)
+    fetch(API_AVAILABLE_PRODUCTS)
       .then(response => response.text())
       .then(data => setProducts(JSON.parse(data)))
       .catch(error => console.error('Error fetching products:', error));
@@ -35,10 +35,10 @@ export function EnterpriseProductGrid() {
       </div>
       
       <Grid data={products} style={{ height: '400px' }}>
-        <GridColumn field="name" title="Product Name" />
-        <GridColumn field="category" title="Category" />
-        <GridColumn field="price" title="Price" format="{0:c}" />
-        <GridColumn field="inStock" title="In Stock" />
+        <GridColumn field="name" title="Nombre" />
+        <GridColumn field="category" title="Categoria" />
+        <GridColumn field="price" title="Precio" format="{0:c}" />
+        <GridColumn field="inStock" title="Estado" />
       </Grid>
     </div>
   );
