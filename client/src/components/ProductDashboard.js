@@ -29,7 +29,7 @@ export function ProductDashboard() {
               <input
                 type="text"
                 className="form-control"
-                placeholder="Introsca su postre..."
+                placeholder="Escriba su postre..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 style={{ width: '250px' }}

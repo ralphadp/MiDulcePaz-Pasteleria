@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { AboutPage } from './AboutPage';
 import { GridPage } from './GridPage';
 import { ProductsPage } from './ProductsPage';
 import { NotFound } from './NotFound';
@@ -20,11 +21,13 @@ function App() {
         <nav>
            | {" "}
           <Link to="/">Catalogo</Link> | {" "}
-          <Link to="/Menu">Menu</Link> | {" "}
+          <Link to="/menu">Menu</Link> | {" "}
+          <Link to="/about">About</Link> | {" "}
         </nav>
         <Routes>
           <Route path="/" element={<ProductsPage />} />
-          <Route path="/Menu" element={<GridPage />} />
+          <Route path="/menu" element={<GridPage />} />
+          <Route path="/about" element={<AboutPage />} />
           {/* Fallback route for non-existent paths */}
           <Route path="*" element={<NotFound />} /> 
         </Routes>
