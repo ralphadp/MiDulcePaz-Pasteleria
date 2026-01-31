@@ -24,14 +24,14 @@ export function AboutPage() {
         {/* Header Section */}
         <div className="row mb-4">
           <div className="col-12">
-            <p>About us</p>
-            <p>{process.env.REACT_APP_API_SERVER_HOST}</p>
-            <p>{API_BASE_URL}</p>
-            <p>{process.env.REACT_APP_API_SERVER_PORT}</p>
-            <p>{APP_BASE_URLPORT}</p>
-            <p>{information.empresa}</p>
-            <p>{information.direccion}</p>
-            <p>{information.telefono}</p>
+            <p>Acerca de ...</p>
+            <input type="hidden" value="{process.env.REACT_APP_API_SERVER_HOST}"/>
+            <input type="hidden" value="{API_BASE_URL}"/>
+            <input type="hidden" value="{process.env.REACT_APP_API_SERVER_PORT}"/>
+            <input type="hidden" value="{APP_BASE_URLPORT}"/>
+            <p><div class="text-primary">Nosotros somos: </div>{information.empresa}</p>
+            <p><div class="text-primary">Direccion: </div>{information.direccion}</p>
+            <p><div class="text-primary">Telefono: </div>{information.telefono}</p>
           </div>
         </div>
       </div>
