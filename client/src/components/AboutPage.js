@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { API_INFO} from '../constants';
+import { API_INFO, API_BASE_URL, APP_BASE_URLPORT} from '../constants';
 
 
 import './App.css';
@@ -29,7 +29,7 @@ export function AboutPage() {
             <p>{API_BASE_URL}</p>
             <p>{process.env.REACT_APP_API_SERVER_PORT}</p>
             <p>{APP_BASE_URLPORT}</p>
-            
+
           </div>
         </div>
       </div>
